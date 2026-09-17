@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Plated & Co.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="header__logo" href="./" aria-label="Plated & Co. home">
+          <img
+            src="assets/icons/logo-image.svg"
+            alt=""
+            width="40"
+            height="40"
+          />
+          <span>Plated & Co.</span>
+        </a>
+
+        <nav class="header__nav" aria-label="Primary navigation">
+          <ul class="header__menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Reservation</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <button class="header__action" type="button" aria-label="Open cart">
+            <img src="assets/icons/cart.svg" alt="" />
+          </button>
+
+          <button
+            class="header__action"
+            type="button"
+            aria-label="Open favorites"
+          >
+            <img src="assets/icons/favorite.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Discover your bowl of energy</p>
+          <h1 class="hero__title">Food that fuels your body and mind</h1>
+          <div class="hero__search-actions">
+            <form class="hero__search">
+              <label class="sr-only" for="location"> Search location </label>
+              <input id="location" type="search" placeholder="Rome, Italy" />
+              <button type="submit" aria-label="Search location">
+                <img src="assets/icons/search.svg" alt="" />
+              </button>
+            </form>
+
+            <div class="hero__ctas">
+              <a class="hero__cta hero__cta--dark" href="#">
+                <span>Book A Table</span>
+                <span class="hero__cta--arrow" aria-hidden="true">→</span>
+              </a>
+
+              <a class="hero__cta hero__cta--primary" href="#">
+                <span>View Menu</span>
+                <span class="hero__cta--arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+          <article class="dish-card">
+            <div class="dish-card__header">
+              <h3 class="dish-card__title">Power Bowl</h3>
+
+              <div
+                class="dish-card__rating"
+                role="img"
+                aria-label="5 out of 5 stars"
+              >
+                <img src="assets/icons/star.svg" alt="" />
+                <img src="assets/icons/star.svg" alt="" />
+                <img src="assets/icons/star.svg" alt="" />
+                <img src="assets/icons/star.svg" alt="" />
+                <img src="assets/icons/star.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="dish-card__divider"></div>
+
+            <div class="dish-card__body">
+              <img
+                class="dish-card__image"
+                src="assets/images/hero/power-bowl.png"
+                alt="Power Bowl"
+              />
+
+              <div class="dish-card__info">
+                <p class="dish-card__chef">Lina Marquez</p>
+                <p class="dish-card__role">Master Chef</p>
+              </div>
+
+              <div class="dish-card__price">$47.99</div>
+
+              <button
+                class="dish-card__cart"
+                type="button"
+                aria-label="Add Power Bowl to cart"
+              >
+                <img src="assets/icons/cart-white.svg" alt="" />
+              </button>
+            </div>
+          </article>
+        </div>
+        <div class="hero__visual">
+          <img
+            class="hero__background"
+            src="assets/images/hero/bg.svg"
+            alt=""
+          />
+          <img class="hero__plate" src="assets/images/hero/plate.png" alt="" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

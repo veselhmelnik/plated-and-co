@@ -1,0 +1,18 @@
+:root {
+  --font-primary: "Poppins", sans-serif;
+
+  --color-text: #2f2f2f;
+  --color-text-muted: #4a4a4f;
+  --color-accent: #ffc107;
+  --color-primary: #567172;
+  --color-dark: #292b2c;
+  --color-muted: #8c8d8f;
+  --color-bg: #fcfcfc;
+
+  --container-width: 1212px;
+  --page-padding: 24px;
+
+  --text-body: 1rem;
+  --text-section-title: 2.375rem;
+  --text-hero: 2.875rem;
+}
