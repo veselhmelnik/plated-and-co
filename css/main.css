@@ -102,12 +102,53 @@ body {
 .hero__inner {
   display: grid;
   grid-template-columns: 42% 58%;
+  position: relative;
 
   aspect-ratio: 773.44 / 532.07;
 
   background: #dfe3e3;
   border-radius: 24px;
   overflow: hidden;
+}
+
+.hero__connector {
+  position: absolute;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hero__connector--recommendation {
+  left: 45%;
+  top: 62%;
+
+  width: 31%;
+  height: 70px;
+
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.hero__connector--recommendation::before,
+.hero__connector--recommendation::after {
+  content: "";
+
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.hero__connector--recommendation::after {
+  right: -6px;
+  top: -5px;
+}
+
+.hero__connector--recommendation::before {
+  left: -5px;
+  bottom: -6px;
 }
 
 .hero__content {
@@ -257,7 +298,7 @@ body {
 
 .dish-card {
   margin-top: 8px;
-  padding: 24px;
+  padding: 30px;
 
   background: #2f3a3b;
   color: white;
@@ -314,7 +355,7 @@ body {
   grid-column: 1;
   grid-row: 1 / 3;
 
-  width: 220px;
+  width: 190px;
   border-radius: 12px;
 }
 
@@ -371,4 +412,157 @@ body {
 .dish-card__rating {
   display: flex;
   gap: 4px;
+}
+
+.ingredient {
+  position: absolute;
+  z-index: 3;
+
+  width: 76px;
+  padding: 6px 3px 12px 3px;
+
+  text-align: center;
+
+  background: linear-gradient(180deg, #e4e2e2 0%, #cfd1d1 60%, #aaafaf 100%);
+  border: 1.5px solid #fff;
+  border-radius: 100px;
+
+  box-shadow:
+    inset 0 -10px 18px rgba(0, 0, 0, 0.06),
+    0 12px 24px rgba(0, 0, 0, 0.16);
+}
+
+.ingredient__image {
+  width: 62px;
+  height: 62px;
+
+  margin-inline: auto;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.ingredient__name {
+  display: block;
+  margin-top: 8px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.05;
+
+  color: var(--color-text);
+}
+
+.ingredient--beans {
+  top: 38%;
+  left: 9%;
+}
+
+.ingredient__connector {
+  position: absolute;
+  pointer-events: none;
+}
+
+.ingredient__connector--beans {
+  left: calc(100% + 8px);
+  top: 50%;
+
+  width: 64px;
+  height: 75px;
+
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.ingredient__connector--beans::before {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  top: -6px;
+
+  width: 10px;
+  height: 10px;
+
+  background: #fff;
+  border-radius: 50%;
+}
+
+.ingredient__connector--beans::after {
+  content: '';
+
+  position: absolute;
+  right: -130px;
+  bottom: -2px;
+
+  width: 130px;
+
+  border-top: 2px solid #fff;
+}
+
+.ingredient--bacon {
+  top: 11%;
+  left: 18%;
+}
+
+.ingredient__connector--bacon {
+  left: calc(100% + 18px);
+  top: 50%;
+
+  width: 60px;
+
+  border-top: 2px solid #fff;
+}
+
+.ingredient__connector--bacon::before {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  top: -6px;
+
+  width: 10px;
+  height: 10px;
+
+  background: #fff;
+  border-radius: 50%;
+}
+
+.ingredient--tomatoes {
+  top: 16%;
+  left: 82%;
+}
+
+.ingredient__connector--cheese {
+  left: 50%;
+  bottom: calc(100% + 18px);
+
+  width: 2px;
+  height: 120px;
+
+  background-color: #fff;
+
+  transform: translateX(-50%);
+}
+
+.ingredient__connector--cheese::before {
+  content: '';
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -5px;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #fff;
+  border-radius: 50%;
+
+  transform: translateX(-50%);
+}
+
+.ingredient--cheese {
+  top: 68%;
+  left: 70%;
 }
